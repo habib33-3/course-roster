@@ -1,5 +1,6 @@
 import "./App.css";
-import Card from "./assets/components/Card/Card";
+import Cards from './components/Cards/Cards';
+
 
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
         Course Registration
       </h1>
 
-      <Card></Card>
+      <Cards></Cards>
     </>
   );
 }

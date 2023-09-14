@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import Card from "../Card/Card";
 import { useEffect, useState } from "react";
 
-const Cards = (props) => {
+const Cards = () => {
   const [contents, setContents] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,20 @@ const Cards = (props) => {
     fetchData();
   }, []);
 
-  return <Card contents={contents}></Card>;
+  return (
+    <>
+      <div className="grid grid-cols-3 items-center justify-center gap-10">
+        {contents.map((content) => {
+          return (
+            <Card
+              key={content.id}
+              content={content}
+            ></Card>
+          );
+        })}
+      </div>
+    </>
+  );
 };
 
 Cards.propTypes = {};
