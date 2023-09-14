@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { FaDollarSign, FaBookOpen } from "react-icons/fa6";
 
-const Card = () => {
+const Card = ({contents}) => {
   return (
     <>
       <div className="card w-80 h-[402] rounded-xl shadow-md p-5 space-y-4 bg-white">
@@ -36,6 +36,8 @@ const Card = () => {
   );
 };
 
-Card.propTypes = {};
+Card.propTypes = {
+  contents:PropTypes.array
+};
 
 export default Card;

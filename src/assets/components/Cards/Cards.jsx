@@ -1,13 +1,23 @@
+import PropTypes from "prop-types";
+import Card from "../Card/Card";
+import { useEffect, useState } from "react";
 
-import PropTypes from 'prop-types'
-import Card from '../Card/Card'
+const Cards = (props) => {
+  const [contents, setContents] = useState([]);
 
-const Cards = props => {
-  return (
-   <Card></Card>
-  )
-}
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch("data.json");
+      const data = await res.json();
+      setContents(data);
+    };
 
-Cards.propTypes = {}
+    fetchData();
+  }, []);
 
-export default Cards
+  return <Card contents={contents}></Card>;
+};
+
+Cards.propTypes = {};
+
+export default Cards;
