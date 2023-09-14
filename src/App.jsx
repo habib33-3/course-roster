@@ -6,6 +6,8 @@ import { useState } from "react";
 function App() {
   const [carts, setCarts] = useState([]);
   const [remainingHour, setRemainingHour] = useState(0);
+  const [totalCreditHour, setTotalCreditHour] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const handleSelectBtn = (card) => {
     const isExist = carts.find((cart) => cart.id === card.id);
@@ -13,14 +15,23 @@ function App() {
     if (isExist) {
       return alert("Already Added");
     }
-    let count = card.credit_hour;
+    let hourCount = card.credit_hour;
 
-    carts.forEach((cart) => (count = cart.credit_hour + count));
-    if (count > 20) {
+    carts.forEach((cart) => (hourCount = cart.credit_hour + hourCount));
+    if (hourCount > 20) {
       return alert("Credit Hour Limit Exceed");
     }
+
+    let priceCount = parseInt(card.price);
+    carts.forEach(
+      (cart) => (priceCount += parseInt(cart.priceCount))
+    );
+
     setCarts([...carts, card]);
-    setRemainingHour(20 - count);
+    setRemainingHour(20 - hourCount);
+    setTotalCreditHour(hourCount);
+    setTotalPrice(priceCount);
+    console.log(priceCount);
   };
 
   return (
@@ -34,6 +45,8 @@ function App() {
         <Carts
           carts={carts}
           remainingHour={remainingHour}
+          totalCreditHour={totalCreditHour}
+          totalPrice={totalPrice}
         ></Carts>
       </div>
     </>
