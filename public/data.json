@@ -1,0 +1,65 @@
+[
+  {
+    "thumbnail": "https://ibb.co/vqRzS1D",
+    "course_name": "Python Object-Oriented Programming (OOP) Fundamentals",
+    "description": "In this comprehensive course, you will master Python programming with a strong emphasis on Object-Oriented Programming (OOP) principles and best practices. Learn to design and build efficient, maintainable software using Python.",
+    "price": "$49.99",
+    "credit_hour": 7
+  },
+  {
+    "thumbnail": "https://ibb.co/rZ90GpH",
+    "course_name": "MySQL Database Management",
+    "description": "Become an expert in MySQL database management with this hands-on course. Learn to create, query, and manage databases effectively, and gain valuable skills for data-driven applications.",
+    "price": "$59.99",
+    "credit_hour": 4
+  },
+  {
+    "thumbnail": "https://ibb.co/pdsS5x8",
+    "course_name": "C Programming for Beginners",
+    "description": "Start your programming journey with C programming. This beginner-friendly course covers the fundamentals of syntax, data types, and basic programming concepts, setting a solid foundation for your coding career.",
+    "price": "$79.99",
+    "credit_hour": 9
+  },
+  {
+    "thumbnail": "https://ibb.co/NT2WrR5",
+    "course_name": "Algorithm Design and Analysis",
+    "description": "Delve into the world of algorithms with this course. Explore algorithm design, analysis, and their practical application in solving complex problems. Sharpen your problem-solving skills.",
+    "price": "$69.99",
+    "credit_hour": 6
+  },
+  {
+    "thumbnail": "https://ibb.co/bQz2QPR",
+    "course_name": "Advanced C++ Programming",
+    "description": "Take your C++ skills to the next level. This course covers advanced topics such as pointers, memory management, and the Standard Template Library (STL). Gain expertise in C++ programming.",
+    "price": "$69.99",
+    "credit_hour": 8
+  },
+  {
+    "thumbnail": "https://ibb.co/phyKyXt",
+    "course_name": "Software Engineering Principles",
+    "description": "Become a proficient software engineer by learning industry best practices, design principles, and software development methodologies. Develop the skills needed for professional software development.",
+    "price": "$99.99",
+    "credit_hour": 3
+  },
+  {
+    "thumbnail": "https://ibb.co/CBtM23Q",
+    "course_name": "Problem Solving in Programming",
+    "description": "Enhance your problem-solving skills through a variety of real-world programming challenges and scenarios. Learn to tackle complex problems systematically and efficiently.",
+    "price": "$79.99",
+    "credit_hour": 5
+  },
+  {
+    "thumbnail": "https://ibb.co/YWsR0Vd",
+    "course_name": "Data Structures and Algorithms Mastery",
+    "description": "Master data structures and algorithms with hands-on implementation in various programming languages. Gain the knowledge and skills required for efficient coding and problem-solving.",
+    "price": "$59.99",
+    "credit_hour": 2
+  },
+  {
+    "thumbnail": "https://ibb.co/2ychm9L",
+    "course_name": "Amazon Web Services (AWS) Cloud Computing",
+    "description": "Learn the ins and outs of Amazon Web Services (AWS) and become proficient in cloud infrastructure management. Acquire the skills needed for modern cloud computing solutions.",
+    "price": "$49.99",
+    "credit_hour": 1
+  }
+]
