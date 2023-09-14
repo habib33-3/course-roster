@@ -7,10 +7,14 @@ function App() {
   const [carts, setCarts] = useState([]);
 
   const handleSelectBtn = (card) => {
+    const isExist = carts.find((cart) => cart.id === card.id);
+
+    if (isExist) {
+      return alert("Already Added");
+    }
     setCarts([...carts, card]);
-    
   };
-console.log(carts);
+
   return (
     <>
       <h1 className="text-4xl text-black font-bold text-center mb-12">
