@@ -2,8 +2,8 @@
   {
     "id": 1,
     "thumbnail": "https://i.ibb.co/nmtkFrR/Rectangle-2.png",
-    "course_name": "Python Object-Oriented Programming (OOP) Fundamentals",
-    "description": "Master Python programming with strong emphasis on Object-Oriented Programming (OOP) principles.",
+    "course_name": "Python Object-Oriented Programming Fundamentals",
+    "description": "Master Python programming with strong emphasis on Object-Oriented Programming principles.",
     "price": 49,
     "credit_hour": 7
   },
