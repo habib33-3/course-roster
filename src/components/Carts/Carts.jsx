@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import Cart from "./../Cart/Cart";
 
-const Carts = ({ carts, remainingHour, totalCreditHour,totalPrice }) => {
+const Carts = ({ carts, remainingHour, totalCreditHour, totalPrice }) => {
   return (
     <>
       <div className="w-1/3 bg-white  h-max px-10 py-6 rounded-xl shadow-xl">
@@ -22,7 +22,7 @@ const Carts = ({ carts, remainingHour, totalCreditHour,totalPrice }) => {
         <p className="py-4 text-gray-700 font-medium border-b border-gray-600">
           Total Credit Hour : {totalCreditHour}
         </p>
-        <p>{totalPrice}</p>
+        <p className="font-semibold my-6">Total Price: {totalPrice} USD</p>
       </div>
     </>
   );

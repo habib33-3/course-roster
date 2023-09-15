@@ -2,10 +2,11 @@ import "./App.css";
 import Cards from "./components/Cards/Cards";
 import Carts from "./components/Carts/Carts";
 import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 function App() {
   const [carts, setCarts] = useState([]);
-  const [remainingHour, setRemainingHour] = useState(0);
+  const [remainingHour, setRemainingHour] = useState(20);
   const [totalCreditHour, setTotalCreditHour] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -13,19 +14,17 @@ function App() {
     const isExist = carts.find((cart) => cart.id === card.id);
 
     if (isExist) {
-      return alert("Already Added");
+      return toast.error("Item Already Added");
     }
     let hourCount = card.credit_hour;
 
     carts.forEach((cart) => (hourCount = cart.credit_hour + hourCount));
     if (hourCount > 20) {
-      return alert("Credit Hour Limit Exceed");
+      return toast.error("Credit Hour Limit Exceeded");
     }
 
-    let priceCount = parseInt(card.price);
-    carts.forEach(
-      (cart) => (priceCount += parseInt(cart.priceCount))
-    );
+    let priceCount = card.price;
+    carts.forEach((cart) => (priceCount += cart.price));
 
     setCarts([...carts, card]);
     setRemainingHour(20 - hourCount);
@@ -48,6 +47,18 @@ function App() {
           totalCreditHour={totalCreditHour}
           totalPrice={totalPrice}
         ></Carts>
+        <Toaster
+          toastOptions={{
+            style: {
+              border: "1px solid #713200",
+              padding: "16px",
+              color: "white",
+              background: "red",
+              fontSize: "24px",
+              fontWeight: "bold,",
+            },
+          }}
+        ></Toaster>
       </div>
     </>
   );
