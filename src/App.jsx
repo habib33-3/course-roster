@@ -30,7 +30,7 @@ function App() {
     setRemainingHour(20 - hourCount);
     setTotalCreditHour(hourCount);
     setTotalPrice(priceCount);
-    console.log(priceCount);
+  
   };
 
   return (
@@ -39,7 +39,7 @@ function App() {
         Course Registration
       </h1>
 
-      <div className="w-[95%] mx-auto flex gap-12  justify-between ">
+      <div className="w-[95%] mx-auto md:flex gap-12  justify-between ">
         <Cards handleSelectBtn={handleSelectBtn}></Cards>
         <Carts
           carts={carts}

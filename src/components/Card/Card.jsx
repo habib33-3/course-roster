@@ -6,7 +6,7 @@ const Card = ({ content, handleSelectBtn }) => {
 
   return (
     <>
-      <div className="card w-[280px] h-[450px] rounded-xl shadow-md p-5 space-y-4 bg-white flex flex-col justify-between ">
+      <div className="card mb-2 w-[280px] h-[450px] rounded-xl shadow-md p-5 space-y-4 bg-white flex flex-col justify-between ">
         <img
           src={thumbnail}
           alt=""
@@ -15,9 +15,9 @@ const Card = ({ content, handleSelectBtn }) => {
 
         <h2 className="text-lg font-semibold ">{course_name}</h2>
 
-        <p className="text-sm text-gray-500 text-justify ">{description}</p>
+        <p className="text-sm text-justify text-gray-500 ">{description}</p>
 
-        <div className="flex justify-between item font-medium text-gray-600">
+        <div className="flex justify-between font-medium text-gray-600 item">
           <div className="flex items-center">
             <FaDollarSign></FaDollarSign>
             <p>Price: {price}</p>
@@ -31,7 +31,7 @@ const Card = ({ content, handleSelectBtn }) => {
 
         <button
           onClick={() => handleSelectBtn(content)}
-          className="btn btn-primary text-white"
+          className="text-white btn btn-primary"
         >
           Select
         </button>
@@ -42,6 +42,7 @@ const Card = ({ content, handleSelectBtn }) => {
 
 Card.propTypes = {
   content: PropTypes.object,
+  handleSelectBtn: PropTypes.func,
 };
 
 export default Card;
