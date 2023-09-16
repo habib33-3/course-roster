@@ -4,12 +4,12 @@ import Cart from "./../Cart/Cart";
 const Carts = ({ carts, remainingHour, totalCreditHour, totalPrice }) => {
   return (
     <>
-      <div className="md:w-1/3 bg-white  h-max px-10 py-6 rounded-xl shadow-xl mb-10">
-        <h2 className="text-blue-500 text-lg font-bold p-3 border-b border-gray-600">
+      <div className="px-10 py-6 mb-10 bg-white shadow-xl md:w-1/3 h-max rounded-xl">
+        <h2 className="p-3 text-lg font-bold text-blue-500 border-b border-gray-600">
           Credit Hour Remaining {remainingHour}
         </h2>
-        <h1 className="text-xl font-bold mt-3">Course Name</h1>
-        <ol className="list-decimal border-b  py-5 border-gray-600 ">
+        <h1 className="mt-3 text-xl font-bold">Course Name</h1>
+        <ol className="py-5 list-decimal border-b border-gray-600 min-h-[200px]">
           {carts.map((cart) => {
             return (
               <Cart
@@ -19,10 +19,10 @@ const Carts = ({ carts, remainingHour, totalCreditHour, totalPrice }) => {
             );
           })}
         </ol>
-        <p className="py-4 text-gray-700 font-medium border-b border-gray-600">
+        <p className="py-4 font-medium text-gray-700 border-b border-gray-600">
           Total Credit Hour : {totalCreditHour}
         </p>
-        <p className="font-semibold my-6">Total Price: {totalPrice} USD</p>
+        <p className="my-6 font-semibold">Total Price: {totalPrice} USD</p>
       </div>
     </>
   );

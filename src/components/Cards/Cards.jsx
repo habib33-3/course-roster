@@ -17,7 +17,7 @@ const Cards = ({ handleSelectBtn }) => {
 
   return (
     <>
-      <div className="md:grid md:grid-cols-3 items-center justify-center gap-10 md:w-2/3 mb-10 mx-auto">
+      <div className="items-center justify-center gap-10 mx-auto mb-10 md:grid md:grid-cols-3 md:w-2/3 ">
         {contents.map((content) => {
           return (
             <Card

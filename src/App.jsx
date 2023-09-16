@@ -35,7 +35,7 @@ function App() {
 
   return (
     <>
-      <h1 className="text-4xl text-black font-bold text-center mb-12">
+      <h1 className="py-12 text-4xl font-bold text-center text-black">
         Course Registration
       </h1>
 
